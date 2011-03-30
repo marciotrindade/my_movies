@@ -1,32 +1,38 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
+gem 'mysql2'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem "will_paginate", ">= 3.0.pre2"
+gem 'devise'
+gem "jammit", :git => 'git://github.com/marciotrindade/jammit.git'
+gem 'inherited_resources'
+gem "simple_form"
+gem 'dynamic_form'
+gem 'validation_reflection'
+gem 'show_for'
+gem "settingslogic"
 
-#gem 'sqlite3'
-gem 'pg'
+group :development do
+  gem 'ruby-debug19'
+  gem 'thin'
+  gem "rails-erd"
+end
 
-# Use unicorn as the web server
-# gem 'unicorn'
+group :console do
+  gem 'wirble'
+  gem 'hirb'
+end
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+group :test do
+  gem 'rspec', '2.5.0'
+  gem "rspec-rails", "2.5.0"
+  gem 'remarkable', '4.0.0.alpha4'
+  gem 'remarkable_activemodel', '4.0.0.alpha4'
+  gem 'remarkable_activerecord', '4.0.0.alpha4'
+  gem 'factory_girl_rails'
+  gem 'mocha'
+  gem 'cover_me', '1.0.0.rc6'
+  gem 'watchr'
+  gem 'spork', '~> 0.9.0.rc4'
+end

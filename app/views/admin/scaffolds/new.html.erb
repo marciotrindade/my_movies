@@ -1,0 +1,16 @@
+<% content_for :navigation do %>
+	<li class="first"><%= link_to t("web-app-theme.list"), collection_path %></li>
+	<li class="active"><%= link_to t("web-app-theme.new"), new_resource_url %></li>
+<% end %>
+
+<% title "#{t("web-app-theme.new")} #{resource_class.model_name.human}" %>
+
+<%= simple_form_for resource, :url => collection_url, :html => { :multipart=> true, :class => "validate" } do |f| %>
+	<%= f.error_messages %>
+	<%= render :partial => "form", :locals => { :f => f } %>
+	<div class="submit">
+		
+		<%= f.submit t("web-app-theme.save") %>
+		<%= link_to t("web-app-theme.cancel"), collection_path %>
+	</div>
+<% end -%>

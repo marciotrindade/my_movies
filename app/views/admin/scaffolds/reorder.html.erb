@@ -1,0 +1,13 @@
+<h1><%=t :reorder %> <%= @items.first.class.model_name.human(:count => 2) rescue "" %></h1>
+
+<ul id="order">
+	<% @items.each do |item| %>
+		<li id="item_<%= item.id %>"><%= item.name %></li>
+	<% end %>
+</ul>
+
+<%= sortable_element 'order', 
+      :complete => visual_effect(:highlight, 'order'), 
+      :url => { :action => "order" } %>
+
+<p><%= link_to t(:back), collection_url %></p>

@@ -1,0 +1,50 @@
+.dataTables_paginate,
+.pagination {
+  display: block;
+  float:right;
+}
+
+.dataTables_paginate span.paginate_button,
+.dataTables_paginate span.paginate_active,
+.pagination em,
+.pagination a,
+.pagination span {
+  border: 1px solid black;
+  padding: 2px 5px;
+  color: black;
+  text-decoration: none;
+}
+.dataTables_paginate span.paginate_active,
+.dataTables_paginate span.paginate_button:hover,
+.pagination a:hover,
+.pagination em {
+  color: white;
+  background-color: black;
+}
+
+.dataTables_paginate span.paginate_active,
+.dataTables_paginate span.paginate_button {
+  margin-right:3px;
+}
+
+table .sorting_asc  { background-image:url('/images/embed/data_tables/sort_asc.gif');   background-repeat: no-repeat; background-position: center right; }
+table .sorting_desc { background-image:url('/images/embed/data_tables/sort_desc.gif');  background-repeat: no-repeat; background-position: center right; }
+table .sorting      { background-image:url('/images/embed/data_tables/sort_both.gif');  background-repeat: no-repeat; background-position: center right; }
+
+.dataTables_length {
+  float:left;
+  padding-bottom:10px;
+}
+.dataTables_filter {
+  float:right;
+}
+.dataTables_filter input {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width:200px;
+  border:1px solid #999;
+  padding:2px;
+}
+.table {
+  clear:both;
+}

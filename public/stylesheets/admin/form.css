@@ -1,0 +1,84 @@
+form .input { margin-bottom: 15px; }
+
+form .numeric input,
+form .string input,
+form .password input,
+form .text textarea {
+  border: 1px solid #2A0000;
+  padding: 3px 2px;
+/*  width: 90%;*/
+}
+
+form abbr {
+  border:none;
+  padding-right:2px;
+  color:red;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+label.error {
+  font-weight: normal;
+  font-size: 11px;
+  color: red;
+}
+
+.boolean label {
+  display: inline;
+  font-weight: normal;
+  padding-left: 5px;
+}
+
+.check_boxes label {
+  font-weight: normal;
+}
+.check_boxes label:first-child {
+  font-weight: bold;
+}
+
+.submit {
+  clear:both;
+  display:table;
+}
+
+.submit a,
+.submit input {
+  background: #EEE url('/images/embed/web-app-theme/tick.png') no-repeat 5px center;
+  line-height: 17px;
+  padding: 5px 10px 5px 27px;
+  margin-right:7px;
+  border: 1px solid #BFBFBF;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration:none;
+  color: #222 !important;
+}
+.submit a {
+  background-image: url('/images/embed/web-app-theme/cross.png');
+  margin-top: 1px;
+}
+.submit a.edit {
+  background-image: url('/images/embed/web-app-theme/application_edit.png');
+}
+
+#errorExplanation {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px 20px;
+  border: 1px solid #fbb;
+  background-color: #fdd;
+  margin-bottom:20px;
+}
+
+#errorExplanation ul {
+  margin:5px 20px;
+  padding-left:10px;
+  list-style-type: disc;
+}

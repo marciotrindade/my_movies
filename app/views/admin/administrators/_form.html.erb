@@ -1,0 +1,7 @@
+<%= f.input :name, :input_html => { :class => 'required' } %>
+<%= f.input :email, :input_html => { :class => 'required email' } %>
+<%= f.input :username, :input_html => { :class => 'required' } %>
+<% if @user.new_record? %>
+	<%= f.input :password, :input_html => { :class => 'required' } %>
+	<%= f.input :password_confirmation, :input_html => { :class => 'required' } %>
+<% end %>

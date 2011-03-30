@@ -1,0 +1,217 @@
+pt:
+  _true: sim
+  _false: não
+
+  #web-app-theme
+  web-app-theme:
+    save: Salvar
+    cancel: Cancelar
+    import: Importar
+    update: Atualizar
+    list: Listar
+    search: Buscar
+    edit: Editar
+    new: Adicionar
+    show: Detalhes
+    delete: Excluir
+    confirm: Você tem certeza?
+    created_at: Criado em
+    all: Todos
+    reorder: Reordenar
+
+  top_menu:
+    profile: Perfil
+    logout: Sair
+    front: Página inicial
+
+  menu:
+    user: Usuários
+    admin: Administradores
+    role: Grupos de acesso
+
+  admin:
+    login: Login
+    admin: Administradores
+
+  # will_paginate
+  will_paginate:
+    previous_label: "&laquo; Anterior"
+    next_label: "Próxima &raquo;"
+
+  # Active Record
+  attributes:
+    name: Nome
+    username: Usuário
+    email: Email
+    password: Senha
+    password_confirmation: Confirmação de senha
+    permalink: Abreviação
+    active: Ativo
+    published_at: Publicado em
+    body: Descriçao
+    page: Página
+    number: Número
+
+  activerecord:
+    models:
+      page:
+        one: Página
+        other: Páginas
+      user:
+        one: "Usuário"
+        other: "Usuários"
+
+    attributes:
+      edition:
+        name: Título
+
+    errors:
+      template:
+        header:
+          one: "{{model}} não pôde ser salvo: 1 erro"
+          other: "{{model}} não pôde ser salvo: {{count}} erros."
+        body: "Por favor, cheque os seguintes campos:"
+      messages:
+        inclusion: "não está incluído na lista"
+        exclusion: "não está disponível"
+        invalid: "não é válido"
+        confirmation: "não está de acordo com a confirmação"
+        accepted: "deve ser aceito"
+        empty: "não pode ficar vazio"
+        blank: "não pode ficar em branco"
+        too_long: "é muito longo (máximo: {{count}} caracteres)"
+        too_short: "é muito curto (mínimo: {{count}} caracteres)"
+        wrong_length: "não possui o tamanho esperado ({{count}} caracteres)"
+        taken: "já está em uso"
+        not_a_number: "deve ser um número"
+        greater_than: "deve ser maior do que {{count}}"
+        greater_than_or_equal_to: "deve ser maior ou igual a {{count}}"
+        equal_to: "deve ser igual a {{count}}"
+        less_than: "deve ser menor do que {{count}}"
+        less_than_or_equal_to: "deve ser menor ou igual a {{count}}"
+        odd: "deve ser ímpar"
+        even: "deve ser par"
+
+  # active suport (validações)
+  support:
+    array:
+      sentence_connector: "e"
+      skip_last_comma: true
+      two_words_connector: " e "
+      words_connector: ", "
+      last_word_connector: " e "
+
+  # formatos de data e hora
+  date:
+    formats:
+      index: "%a, %d.%b.%Y"
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%A, %d de %B de %Y"
+      only_day: "%d"
+      month: %B
+      day: "Dia %d, %A"
+      title_month: %B de %Y
+
+    day_names: ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"]
+    abbr_day_names: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+    month_names: [~, "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+    abbr_month_names: [~, "jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%d/%m/%Y - %Hh%M"
+      date: "%d/%m/%Y"
+      time: "%H:%M h"
+      short: "%d/%m/%Y - %H:%M h"
+      long: "%A, %d de %B de %Y, %H:%M hs"
+      only_second: "%S"
+      datetime:
+        formats:
+          default: "%Y-%m-%dT%H:%M:%S%Z"
+    am: ''
+    pm: ''
+
+  # date helper distanci em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: 'meio minuto'
+      less_than_x_seconds:
+        one: 'menos de 1 segundo'
+        other: 'menos de {{count}} segundos'
+
+      x_seconds:
+        one: '1 segundo'
+        other: '{{count}} segundos'
+
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de {{count}} minutos'
+
+      x_minutes:
+        one: '1 minuto'
+        other: '{{count}} minutos'
+
+      about_x_hours:
+        one: 'aproximadamente 1 hora'
+        other: 'aproximadamente {{count}} horas'
+
+      x_days:
+        one: '1 dia'
+        other: '{{count}} dias'
+
+      about_x_months:
+        one: 'aproximadamente 1 mês'
+        other: 'aproximadamente {{count}} meses'
+
+      x_months:
+        one: '1 mês'
+        other: '{{count}} meses'
+
+      about_x_years:
+        one: 'aproximadamente 1 ano'
+        other: 'aproximadamente {{count}} anos'
+
+      over_x_years:
+        one: 'mais de 1 ano'
+        other: 'mais de {{count}} anos'
+    # data select
+    prompts:
+      day: Dia
+      month: Mês
+      year: Ano
+
+  # numeros
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'R$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 1
+        delimiter: '.'
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"

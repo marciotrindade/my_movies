@@ -1,0 +1,26 @@
+javascript_compressor: closure
+embed_images: on
+
+javascripts:
+  base:
+    - public/javascripts/jquery.js
+    - public/javascripts/default.js
+  admin:
+    - public/javascripts/jquery.js
+    - public/javascripts/plugins/data_tables.js
+    - public/javascripts/rails.js
+    - public/javascripts/plugins/jquery-ui.js
+    - public/javascripts/plugins/validate.js
+    - public/javascripts/plugins/validate_pt-BR.js
+    - public/javascripts/admin/default.js
+
+stylesheets:
+  base:
+    - public/stylesheets/reloaded.css
+    - public/stylesheets/default.css
+  admin:
+    - public/stylesheets/reloaded.css
+    - public/stylesheets/jquery-ui.css
+    - public/stylesheets/admin/theme.css
+    - public/stylesheets/admin/form.css
+    - public/stylesheets/admin/paginate.css

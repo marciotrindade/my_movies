@@ -1,0 +1,6 @@
+pt:
+  show_for:
+    blank: não informado
+    "yes": sim
+    "no": não
+  

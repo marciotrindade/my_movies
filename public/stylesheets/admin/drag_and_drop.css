@@ -1,0 +1,111 @@
+*:focus { outline: none; }
+#main.extra { width: 100% !important; }
+#drag_drop {
+  display: table;
+  width: 100%;
+}
+#drag_drop .drop {
+  margin: 20px;
+  width: 220px;
+  float:left;
+}
+#drag_drop .drop.pages {
+  height:200px;
+  padding-right:20px;
+  position: fixed;
+  top: 170px;
+  left: 50px;
+  overflow-y:auto;
+  overflow-x:inherit;
+}
+#drag_drop .drop form > fieldset { padding: 0 10px; }
+#drag_drop .drop form  h2 {
+  text-align: center;
+  color: #af0000;
+  font-size: 18px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+#drag_drop .drop form .cover { display: none; }
+#drag_drop .drop form li {
+  text-align: left;
+  margin: 2px 0;
+}
+#drag_drop .drop form > fieldset label { font-weight: normal; }
+
+#drag_drop .drop .items { margin-bottom:40px; }
+
+#drag_drop .drop .items li {
+  padding: 10px 10px 10px 5px;
+  margin-bottom: 10px;
+  list-style: none;
+  border: 1px solid #1FDF00;
+  background-color: #BBFFB6;
+}
+
+#drag_drop .drop .items li a { color: black; text-decoration:none; }
+#drag_drop .drop #trash li {
+  border: 1px solid #fbb;
+  background-color: #fdd;
+}
+#drag_drop .drop #defective li {
+  border: 1px solid blue;
+  background-color: #BDDDFF;
+}
+#drag_drop .drop #subjects li {
+  border: 3px solid white;
+  background-color: white;
+}
+
+#drag_drop .drop .items li.hover {
+  border: 1px solid #fed22f !important;
+  background-color: #ffe45c !important;
+}
+
+#drag_drop .drag {
+  margin: 20px;
+  float: right;
+  width: 600px;
+}
+#drag_drop form {
+  margin-bottom: 20px;
+  text-align: center;
+}
+#drag_drop .drag ul {
+  display:table;
+  background-color: #EEE;
+}
+#drag_drop .drag li {
+  list-style: none;
+  float: left;
+  text-align: center;
+  width: 150px;
+  height: 450px;
+  padding:10px;
+}
+#drag_drop .drag img { border: 3px solid white; margin-top:2px; }
+#drag_drop .drag .move {
+  border: 3px solid #f39814;
+  background-color: #f39814;
+  height: 15px;
+  width: 100%;
+}
+#drag_drop .drag .defect .move { background-color: blue; border-color:blue; }
+#drag_drop .drag .ui-selected img { border: 3px solid #f39814; }
+#size { height: 20px; }
+#drag_drop form .string input { width: 180px; }
+.drop #start_date,
+.drop #end_date {
+  width: 80px;
+  margin: 5px 0;
+}
+.reload {
+  clear: both;
+  text-align: center;
+}
+.reload button { padding: 5px; }
+
+.cover { text-align:left; }
+.cover label { font-weight: normal; }
+
+.ui-selectable-helper { border:1px dotted black }

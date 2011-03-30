@@ -1,0 +1,12 @@
+<div class="content">
+	<h2 class="title"><%= t(:login, :scope => :admin)%></h2>
+	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => "validate inner" }) do |f| %>
+		<%= f.input :username, :input_html => { :class => 'required' } %>
+		<%= f.input :password, :input_html => { :class => 'required' } %>
+		<%= f.input :remember_me, :as => :boolean %>
+		<div class="submit">
+			<%= f.submit 'Login' %>
+		</div>
+	<% end -%>
+	<p><%= render :partial => "devise/shared/links" %></p>
+</div>

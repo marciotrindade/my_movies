@@ -1,0 +1,18 @@
+<% content_for :navigation do %>
+	<li class="first"><%= link_to t("web-app-theme.list"), collection_path %></li>
+	<li><%= link_to t("web-app-theme.new"), new_resource_path %></li>
+<% end %>
+
+<% title "#{t("web-app-theme.edit")} Perfil" %>
+
+<%= simple_form_for(@user, :url => update_profile_admin_user_path(@user), :html => { :method => :put, :class => "validate" }) do |f| %>
+	<%= f.input :name, :input_html => { :class => 'required' } %>
+	<%= f.input :email, :input_html => { :class => 'required email' } %>
+	<%= f.input :username, :input_html => { :class => 'required' } %>
+	<%= f.input :password %>
+	<%= f.input :password_confirmation %>
+	<div class="submit">
+		<%= f.submit t("web-app-theme.save") %>
+		<%= link_to t("web-app-theme.cancel"), collection_path %>
+	</div>
+<% end -%>

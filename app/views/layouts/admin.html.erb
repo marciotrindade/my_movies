@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><%= AppConfig.site.name %></title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-language" content="en"/>
+	<meta name="author" content="Marcio Trindade"/>
+	<meta name="distribution" content="global"/>
+	<meta name="revisit-after" content="30 days"/>
+	<meta name="copyright" content="marciotrindade.com"/>
+	<%= csrf_meta_tag %>
+
+	<link href="/favicon.ico" type="image/x-icon" rel="icon"/>
+	<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+
+	<%= include_stylesheets :admin %>
+	<%= yield :css %>
+</head>
+<body>
+
+<div id="header">
+	<h1><%= link_to AppConfig.site.name, root_url %></h1>
+	<div id="nav">
+		<ul>
+			<li><%= link_to t(:front, :scope => :top_menu), root_path %></li>
+			<li><%= link_to t(:profile, :scope => :top_menu), profile_admin_users_path %></li>
+			<li><%= link_to t(:logout, :scope => :top_menu), destroy_user_session_path %></li>
+		</ul>
+	</div>
+</div>
+
+<div class="flash">
+	<% flash.each do |type, message| -%>
+		<p class="message <%= type %>"><%= message %></p>
+	<% end -%>
+</div>
+
+<div id="breadcrumb">
+	<%= breadcrumb %>
+</div>
+
+<div id="c">
+	<table>
+		<tr>
+			<td class="aside">
+				<h3 class="top">Menu</h3>
+				<div class="block">
+					<ul class="navigation">
+						<li><%= link_to t(:user, :scope => :menu), admin_users_path %></li>
+						<li><%= link_to t(:admin, :scope => :menu), admin_administrators_path %></li>
+						<li><%= link_to t(:role, :scope => :menu), admin_roles_path %></li>
+					</ul>
+				</div>
+			</td>
+			<td id="main">
+				<div class="top">
+					<ul id="sub_nav">
+						<%= yield(:navigation) %>
+					</ul>
+				</div>
+
+				<div class="block">
+					<div class="content">
+						<h2 class="title"><%= yield(:title) %></h2>
+						<%= yield %>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div id="footer">
+		<p>Copyright &copy; <%= Date.today.year %> <%= link_to "Marcio Trindade", "http://marciotrindade.com" %>.</p>
+	</div>
+</div>
+
+</body>
+
+<%= include_javascripts :admin %>
+<%= yield :js %>
+</html>

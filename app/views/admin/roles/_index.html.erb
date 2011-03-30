@@ -1,0 +1,29 @@
+<% if collection.present? %>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="first">ID</th>
+				<th><%= resource_class.human_attribute_name(:name) %></th>
+				<th class="last">&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% collection.each do |object| -%>
+				<tr class="<%= cycle("odd", "even") %>">
+					<td><%= object.id %></td>
+					<td><%= object.name %></td>
+
+					<td class="last">
+						<%= link_to t("web-app-theme.show"), resource_path(object) %> |
+						<%= link_to t("web-app-theme.edit"), edit_resource_path(object) %> |
+						<%= link_to t("web-app-theme.delete"), resource_path(object), :method => :delete, :confirm => t("web-app-theme.confirm") %>
+					</td>
+				</tr>
+			<% end -%>
+		</tbody>
+	</table>
+<% else %>
+	<%= render :partial => "defaults/no_results" %>
+<% end %>
+
+<% data_table %>

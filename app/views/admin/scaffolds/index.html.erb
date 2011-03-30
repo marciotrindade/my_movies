@@ -1,0 +1,8 @@
+<% content_for :navigation do %>
+	<li class="first active"><%= link_to t("web-app-theme.list"), collection_path %></li>
+	<li><%= link_to t("web-app-theme.new"), new_resource_path %></li>
+<% end %>
+
+<% title resource_class.model_name.human(:count => 2) %>
+
+<%= render :partial => 'index' %>

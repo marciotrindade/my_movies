@@ -1,0 +1,21 @@
+<% title("Sign Up", "signup") %>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => "validate" }) do |f| %>
+	<%= devise_error_messages! %>
+
+	<div id="plans">
+		<h2><%= t(:select_package) %>:</h2>
+		<input type="radio" name="plan" value="1" id="plan" checked="checked"><label for="plan"><%= t('plan.free') %></label>
+	</div>
+
+	<%= f.input :name,     :required => true, :input_html => { :class => "required" } %>
+	<%= f.input :username, :required => true, :input_html => { :class => "required login" } %>
+	<%= f.input :email,    :required => true, :input_html => { :class => "required email" } %>
+	<%= f.input :password, :required => true, :input_html => { :class => "required" } %>
+	<%= f.input :password_confirmation, :required => true, :input_html => { :class => "required" } %>
+
+	<%= f.submit "Sign Up Now" %>
+
+	<%= render :partial => "devise/shared/links" %>
+
+<% end %>

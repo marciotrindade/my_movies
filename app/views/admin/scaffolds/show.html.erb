@@ -1,0 +1,11 @@
+<% content_for :navigation do %>
+	<li class="first"><%= link_to t("web-app-theme.list"), collection_path %></li>
+	<li><%= link_to t("web-app-theme.new"), new_resource_path %></li>
+<% end %>
+
+<%= render :partial => 'show' %>
+
+<div class="submit">
+	<%= link_to t("web-app-theme.edit"), edit_resource_path, :class => "edit" %>
+	<%= link_to t("web-app-theme.delete"), resource_path, :method => "delete", :confirm => t("web-app-theme.confirm") %>
+</div>

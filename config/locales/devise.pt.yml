@@ -1,0 +1,43 @@
+pt:
+  errors:
+    messages:
+      not_found: "não encontrado"
+      already_confirmed: "já esta confirmado"
+      not_locked: "não está bloqueado"
+
+  devise:
+    failure:
+      unauthenticated: 'Voce precisa logar ou registrar pra continuar.'
+      unconfirmed: 'Você precisa confirmar sua conta pra continuar.'
+      locked: 'Sua conta está bloqueada.'
+      invalid: 'Usuário ou senha inválidos.'
+      invalid_token: 'Chave de autenticação inválida.'
+      timeout: 'Sua sessão inspirou, por favor faça login novamente.'
+      inactive: 'Sua conta ainda não está ativada.'
+      access_denied: Você não tem permissão
+    sessions:
+      signed_in: 'Login feito com sucesso.'
+      signed_out: 'Deslogado com sucesso.'
+    passwords:
+      send_instructions: 'Você irá receber um email com instruções pra recuperar sua senha em instantes.'
+      updated: 'Sua senha foi alterada com sucesso. Você já está logado.'
+    confirmations:
+      send_instructions: 'Você irá receber um email com instuções pra ativar a sua conta em instantes.'
+      confirmed: 'Sua conta foi ativada com sucesso. Você já está logado.'
+    registrations:
+      signed_up: 'You have signed up successfully. If enabled, a confirmation was sent to your e-mail.'
+      updated: 'Conta atualizada com sucesso.'
+      destroyed: 'Sua conta foi removida com sucesso. Esperamos que volte em breve. Obrigado.'
+    unlocks:
+      send_instructions: 'Você irá receber um email com instruções para desbloquear a sua conta em instantes.'
+      unlocked: 'Sua conta foi desbloqueada com sucesso. Você já está logado.'
+    mailer:
+      confirmation_instructions:
+        subject: 'Instruções de confirmação'
+      reset_password_instructions:
+        subject: 'Instruções de recuperação de senha'
+      unlock_instructions:
+        subject: 'Instruções de desbloqueio'
+  
+  forgot: Esqueceu sua senha?
+  change_my_password: Alterar minha senha
