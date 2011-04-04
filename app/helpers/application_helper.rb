@@ -12,7 +12,7 @@ module ApplicationHelper
     html = link_to_unless_current "Home", root_url
     breadcrumbs.each do |title, link|
       html << " > "
-      html << link_to_unless_current(t("breadcrumb.#{title}", :default => title.to_s), eval(link.to_s))
+      html << link_to_unless_current(t(title, :scope => :breadcrumbs, :default => title.to_s), eval(link.to_s))
     end
     html.html_safe
   end

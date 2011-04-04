@@ -7,11 +7,12 @@ javascripts:
     - public/javascripts/default.js
   admin:
     - public/javascripts/jquery.js
+    - public/javascripts/plugins/data_tables_pt.js
     - public/javascripts/plugins/data_tables.js
-    - public/javascripts/rails.js
     - public/javascripts/plugins/jquery-ui.js
     - public/javascripts/plugins/validate.js
-    - public/javascripts/plugins/validate_pt-BR.js
+    - public/javascripts/plugins/validate_pt.js
+    - public/javascripts/rails.js
     - public/javascripts/admin/default.js
 
 stylesheets:

@@ -14,13 +14,22 @@ module AdminHelper
                           "bStateSave" => true,
                           "bInfo" => false,
                           "iDisplayLength" => "100",
-                          "aaSorting" => [[ 0, "asc"]],
-                          "oLanguage" => { "sUrl" => "/javascripts/plugins/data_tables_#{I18n.locale}.js" }
+                          "aaSorting" => [[ 0, "asc"]]
     content_for(:js) do
       javascript_tag do
-        "$('.table').dataTable(#{options.to_json}).css('width', 'auto');".html_safe
+        "$('.table').dataTable(#{options.to_json});".html_safe
       end
     end
+  end
+
+  def admin_title
+    text = ""
+    text << AppConfig.site.name
+    breadcrumbs.each do |title, link|
+      text << " - "
+      text << t(title, :scope => :breadcrumbs, :default => title.to_s)
+    end
+    text
   end
 
 end

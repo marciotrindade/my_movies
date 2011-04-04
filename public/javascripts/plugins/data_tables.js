@@ -920,25 +920,27 @@
 			 * Notes:    The words in the format _VAR_ are variables which are dynamically replaced
 			 *   by javascript
 			 */
-			this.oLanguage = {
-				"sProcessing": "Processing...",
-				"sLengthMenu": "Show _MENU_ entries",
-				"sZeroRecords": "No matching records found",
-				"sEmptyTable": "No data available in table",
-				"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
-				"sInfoEmpty": "Showing 0 to 0 of 0 entries",
-				"sInfoFiltered": "(filtered from _MAX_ total entries)",
-				"sInfoPostFix": "",
-				"sSearch": "Search:",
-				"sUrl": "",
-				"oPaginate": {
-					"sFirst":    "First",
-					"sPrevious": "Previous",
-					"sNext":     "Next",
-					"sLast":     "Last"
-				},
-				"fnInfoCallback": null
-			};
+      // Marcio Trindade commented to use with rails helper with predefined js variabel
+      // this.oLanguage = {
+      //  "sProcessing": "Processing...",
+      //  "sLengthMenu": "Show _MENU_ entries",
+      //  "sZeroRecords": "No matching records found",
+      //  "sEmptyTable": "No data available in table",
+      //  "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+      //  "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+      //  "sInfoFiltered": "(filtered from _MAX_ total entries)",
+      //  "sInfoPostFix": "",
+      //  "sSearch": "Search:",
+      //  "sUrl": "",
+      //  "oPaginate": {
+      //    "sFirst":    "First",
+      //    "sPrevious": "Previous",
+      //    "sNext":     "Next",
+      //    "sLast":     "Last"
+      //  },
+      //  "fnInfoCallback": null
+      // };
+			this.oLanguage = datatable_oLanguage;
 
 			/*
 			 * Variable: aoData

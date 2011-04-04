@@ -33,6 +33,15 @@ pt:
     login: Login
     admin: Administradores
 
+  # admin breadcrumb
+  breadcrumbs:
+    create: Adicionar
+    edit: Editar
+    admin: Admin
+    user: Usuários
+    administrators: Administradores
+    role: Grupos de acesso
+
   # will_paginate
   will_paginate:
     previous_label: "&laquo; Anterior"
