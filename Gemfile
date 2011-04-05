@@ -17,6 +17,8 @@ group :development do
   gem 'ruby-debug19'
   gem 'thin'
   gem "rails-erd"
+  # gem "bullet"
+  # gem "ruby-growl"
 end
 
 group :console do
